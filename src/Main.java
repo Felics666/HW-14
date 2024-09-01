@@ -1,24 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        Car car = new Car("car1", 4);
-        Car car2 = new Car("car2", 4);
+
+        final Bicycle bicycle = new Bicycle("bicycle", 2);
+        final Bicycle bicycle2 = new Bicycle("bicycle2", 1);
+
+        final Car car = new Car("car1", 4);
+        final Car car2 = new Car("car2", 1);
+
+        final Truck truck = new Truck("track1", 8);
+        final Truck truck2 = new Truck("track2", 6);
 
 
-        Truck truck = new Truck("truck1", 6);
-        Truck truck2 = new Truck("truck2", 8 );
 
+       final  WheeledTransport[] wheeledTransports  = {bicycle, bicycle2, car, car2, truck2, truck};
+        for (WheeledTransport wheeledTransport : wheeledTransports) wheeledTransport.check();
 
-        Bicycle bicycle = new Bicycle("bicycle1",2);
-        Bicycle bicycle2 = new Bicycle("bicycle2", 2);
-
-
-
-        ServiceStation.check(car, null, null);
-        station.check(car2, null, null);
-        station.check(null, bicycle, null);
-        station.check(null, bicycle2, null);
-        station.check(null, null, truck);
-        station.check(null, null, truck2);
     }
 }
